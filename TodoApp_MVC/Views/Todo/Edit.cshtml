@@ -1,0 +1,17 @@
+﻿@model TodoApp_MVC.Models.TodoItem
+
+<h2>Edit Todo</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div>
+        <label for="Title">Title</label>
+        <input type="text" name="Title" value="@Model.Title" required />
+    </div>
+    <div>
+        <label for="IsCompleted">Completed</label>
+        <input type="checkbox" name="IsCompleted" @(Model.IsCompleted ? "checked" : "") />
+    </div>
+    <button type="submit">Update</button>
+</form>
+
